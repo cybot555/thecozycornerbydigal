@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Cozy Online Bookstore",
+  description:
+    "Discover hand-picked book recommendations for calm, comfort, and meaningful stories.",
+};
+
 export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50">

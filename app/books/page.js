@@ -1,9 +1,15 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Book Recommendations",
+  description:
+    "Browse hand-picked book recommendations from The Cozy Corner across cozy and inspiring reads.",
+};
+
 export default function BooksPage() {
   return (
     <section>
-      <h2 className="text-3xl font-semibold mb-6">Book Recommendations</h2>
+      <h1 className="text-3xl font-semibold mb-6">Book Recommendations</h1>
 
       <div className="grid md:grid-cols-3 gap-6">
         <div className="bg-white p-4 rounded shadow">

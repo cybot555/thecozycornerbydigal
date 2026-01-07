@@ -1,7 +1,13 @@
+export const metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with The Cozy Corner for questions, suggestions, or book requests.",
+};
+
 export default function ContactPage() {
   return (
     <section className="max-w-md">
-      <h2 className="text-3xl font-semibold mb-4">Contact Us</h2>
+      <h1 className="text-3xl font-semibold mb-4">Contact Us</h1>
 
       <form className="bg-white p-6 rounded shadow space-y-4">
         <input

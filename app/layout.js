@@ -13,8 +13,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "The Cozy Corner",
-  description: "A cozy online bookstore with great recommendations",
+  metadataBase: new URL("https://thecozycornerbydigal.vercel.app"),
+  title: {
+    default: "The Cozy Corner",
+    template: "%s | The Cozy Corner",
+  },
+  description: "The Cozy Corner is an online bookstore with great book recommendations.",
+  openGraph: {
+    title: "The Cozy Corner",
+    description: "The Cozy Corner is an online bookstore with great book recommendations.",
+    url: "https://thecozycornerbydigal.vercel.app",
+    siteName: "The Cozy Corner",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/images/book1.png",
+        alt: "The Cozy Corner",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "The Cozy Corner",
+    description: "The Cozy Corner is an online bookstore with great book recommendations.",
+    images: ["/images/book1.png"],
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -25,7 +49,9 @@ export default function RootLayout({ children }) {
       >
         <header className="border-b bg-white">
           <div className="mx-auto max-w-6xl flex justify-between items-center p-4">
-            <h1 className="text-xl font-semibold">The Cozy Corner</h1>
+            <Link href="/" className="text-xl font-semibold">
+              The Cozy Corner
+            </Link>
             <nav className="space-x-4 text-sm">
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
